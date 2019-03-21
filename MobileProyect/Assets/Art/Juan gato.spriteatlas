@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Juan gato
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 21300000, guid: 5e67e5cac048cd248899eb937067e493, type: 3}
+    - {fileID: 21300000, guid: 83266058e3375074cb46575e1ce08a8b, type: 3}
+    - {fileID: 2800000, guid: 1f62aba9aff0ca24aaf3a7ee6fe569f5, type: 3}
+    - {fileID: 2800000, guid: a530f1834c07008498dc9ef67326f784, type: 3}
+    - {fileID: 21300000, guid: 63456622ab53fcc45b6cc30a4b85a487, type: 3}
+    - {fileID: 2800000, guid: 3d2f3d3a06ebbf540a4d9157a7bfb79a, type: 3}
+    - {fileID: 21300000, guid: de8c65de875dcea408f80b4127e73d67, type: 3}
+    totalSpriteSurfaceArea: 1806077
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 63456622ab53fcc45b6cc30a4b85a487, type: 3}
+  - {fileID: 21300000, guid: a530f1834c07008498dc9ef67326f784, type: 3}
+  - {fileID: 21300000, guid: 83266058e3375074cb46575e1ce08a8b, type: 3}
+  - {fileID: 21300000, guid: 1f62aba9aff0ca24aaf3a7ee6fe569f5, type: 3}
+  - {fileID: 21300000, guid: 3d2f3d3a06ebbf540a4d9157a7bfb79a, type: 3}
+  - {fileID: 21300000, guid: 5e67e5cac048cd248899eb937067e493, type: 3}
+  - {fileID: 21300000, guid: de8c65de875dcea408f80b4127e73d67, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - U
+  - P
+  - B
+  - C
+  - T
+  - A
+  - O
+  m_Tag: Juan gato
+  m_IsVariant: 0
