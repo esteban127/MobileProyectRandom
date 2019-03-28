@@ -5,15 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 4cd2631c3bf1d664b9a144eb3e15b404
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LoadingScreen.unity
     guid: 70ff8a6b5954d51489f54a32588bf13b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene1.unity
     guid: 6497db6ae41b8eb4984c419c67d1a950
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Town.unity
-    guid: 88a5bb329a7458b4da84c02c5231032d
+    path: Assets/Scenes/TouchTest.unity
+    guid: 374781ff29a290a49a9fe4c73584c96d
+  m_configObjects: {}
