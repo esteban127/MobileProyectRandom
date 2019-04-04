@@ -18,7 +18,13 @@ public class touchTestScript : MonoBehaviour
         left,
         leftTop,
     }
-    [SerializeField] GameObject testSprite;
+    enum gestures
+    {
+        pull,
+        push,
+        clockwiseCircle,
+        andtiClockwiseCircle
+    }
     [SerializeField] float minSwipeDistance = 5;
     [SerializeField] Text outputText;
     List<int> idToActualizate;
@@ -45,11 +51,13 @@ public class touchTestScript : MonoBehaviour
                 if (Input.touches[i].phase == TouchPhase.Moved)
                 {
                     GetSwipeByID(Input.touches[i].fingerId).End = Input.touches[i].position;
+                    GetSwipeByID(Input.touches[i].fingerId).Tap = false;
                     idToActualizate.Add(Input.touches[i].fingerId);
                 }
                 if (Input.touches[i].phase == TouchPhase.Ended)
                 {
                     GetSwipeByID(Input.touches[i].fingerId).End = Input.touches[i].position;
+                    GetSwipeByID(Input.touches[i].fingerId).Ended = true;
                     idToDelete.Add(Input.touches[i].fingerId);
                 }
 
@@ -66,20 +74,7 @@ public class touchTestScript : MonoBehaviour
                         swipes.Remove(GetSwipeByID(del));
                     }
                     idToDelete.Clear();
-                }
-                /*codigo anterior de los puntitos
-                if (Input.touches[i].phase == TouchPhase.Began)
-                {
-                    GameObject instance = Instantiate(testSprite);
-                    Vector3 screenPoint = new Vector3(Input.touches[i].position.x, Input.touches[i].position.y, 10.0f);
-                    instance.transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
-                }
-                if (Input.touches[i].phase == TouchPhase.Moved)
-                {
-                    GameObject instance = Instantiate(testSprite);
-                    Vector3 screenPoint = new Vector3(Input.touches[i].position.x, Input.touches[i].position.y, 10.0f);
-                    instance.transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
-                }*/
+                }                
             }
         }
         
@@ -130,7 +125,8 @@ public class touchTestScript : MonoBehaviour
         }
         else
         {
-            outputText.text = "Tap";
+            if(swipe.Ended && swipe.Tap)
+                outputText.text = "Tap";
             
         }
     }
@@ -187,6 +183,10 @@ public class touchTestScript : MonoBehaviour
         Vector2 end = new Vector2(-1,-1);      
         public Vector2 Origin{get{return origin;}set{origin = value;}}
         public Vector2 End{get{return end;}set{end = value;}}
+        bool ended = false;
+        public bool Ended { get { return ended; } set { ended = value; } }
+        bool tap = true;
+        public bool Tap { get { return tap; } set { tap = value; } }
 
         public Swipe(Vector2 N_origin,int finger)
         {
@@ -230,6 +230,29 @@ public class touchTestScript : MonoBehaviour
             }
         }
     }       
+
+    class Gesture
+    {
+        List<swipeDirection> recordedDirections = new List<swipeDirection>();
+        int duration = 0;
+        public int Duration { get { return duration; } }
+
+        public void RecordGesture(Swipe swipe)
+        {
+            duration++;
+            if(recordedDirections.Count == 0 || recordedDirections[recordedDirections.Count - 1]!= swipe.Direction())
+            {
+                recordedDirections.Add(swipe.Direction());
+            } 
+        }
+
+        public gestures ReadGesture()
+        {
+            return gestures.c
+        }
+
+
+    }
 
 
 }

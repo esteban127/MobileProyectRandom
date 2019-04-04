@@ -1532,7 +1532,7 @@ GameObject:
   - component: {fileID: 1948790558}
   - component: {fileID: 1948790557}
   m_Layer: 0
-  m_Name: Interactive
+  m_Name: Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1550,9 +1550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f617bfe8188c2754b824d3a6210253ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testSprite: {fileID: 6684385644240073212, guid: d5267a34da1e37144af5314fb7ef36a6,
-    type: 3}
-  minSwipeDistance: 0.05
+  minSwipeDistance: 0.5
   outputText: {fileID: 1882995404}
 --- !u!4 &1948790558
 Transform:
