@@ -39,7 +39,6 @@ public class touchTestScript : MonoBehaviour
     }
     void Update()
     {
-
         if (Input.touches.Length > 0)
         {            
             for (int i = 0; i < Input.touches.Length; i++)
@@ -244,14 +243,7 @@ public class touchTestScript : MonoBehaviour
             {
                 recordedDirections.Add(swipe.Direction());
             } 
-        }
-
-        public gestures ReadGesture()
-        {
-            return gestures.c
-        }
-
-
+        } 
     }
 
 
